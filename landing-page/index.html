@@ -1,0 +1,280 @@
+---
+layout: oasis
+css: oasis
+nav:
+  - name: home
+    link: '/'
+  - name: snippets
+    link: '#section-snippets'
+  - name: features
+    link: '#section-features'
+  - name: stats
+    link: '#section-stats'
+  - name: integration
+    link: '#section-integrations'
+  - name: customers
+    link: '#section-customers'
+  - name: contact
+    link: '#section-contact'
+section-hero:
+  title: Verifera
+  description: Determine if an identity document has been forged, tampered with, or been stolen.
+  image: "images/hero-phone.gif"
+section-summary:
+  title: Simple Identity Verification
+  list:
+    - img: "images/summary-github.png"
+      text: Intuitive user interface for users to upload a photo of their identity document.
+    - img: "images/summary-cpu.png"
+      text: State of the art machine learning algorithms analyse the photo.
+    - img: "images/summary-dollar.png"
+      text: Receive the photo analysis results within seconds.
+  text: >-
+    Rather than relying on manual verification where users have to scan and email their identity documents, users never leave your application flow and can complete identity verification in less than a minute.
+section-snippets:
+  title: Easy tracking of all Your stats
+  cards:
+    - text: Health check on the latest selected time range
+      stats: OK
+    - text: The average ping up time of selected time range
+      stats: 95%
+    - text: Average latency in the selected time range
+      stats: 19ms
+    - text: Shows the average packet lost in selected time range
+      stats: 0.1
+    - text: Error rate of bit transmission in selected time range
+      stats: 0.02%
+  description: >-
+    Throughput is controlled by available bandwidth, as well as the available signal-to-noise ratio and hardware limitations. Throughput for the purpose of this article will be understood to be measured from the arrival of the first bit of data at the receiver, to decouple the concept of throughput from the concept of latency.
+    <br><br>
+    Choice of an appropriate time window will often dominate calculations of throughput.
+section-features:
+  title: Features of Verifera
+  description: TCP acceleration converts the TCP packets into a stream that is similar to UDP. Because of this, the TCP acceleration software must provide its own mechanisms to ensure the reliability of the link.
+  image: "images/features-image.jpg"
+  features-left:
+    - img: "images/features-circle.svg"
+      text: Simple cross-platform SDKs make integration painless no matter what platform you're using.
+    - img: "images/features-polygon.svg"
+      text: Customizable integration provides you with extra data such as text on the document.
+    - img: "images/features-rec.svg"
+      text: Intuitive user interface maximizes conversion rates.
+  features-right:
+    - img: "images/features-star.svg"
+      text: Other providers use older verification techniques while Verifera uses state of the art machine learning algorithms.
+    - img: "images/features-triangle.svg"
+      text: For high risk verifications, documents are manually verified to ensure we provide the best results.
+    - img: "images/features-rec.svg"
+      text: Support for all Canadian driver's licenses. Limited support for United States documents.
+section-stats:
+  title: Stats on Oasis
+  description: These long path length considerations are exacerbated when communicating with space probes and other long-range targets beyond Earth's atmosphere.
+  stats-list:
+    - id: stats-0
+      name: A/B Split
+      number: A/B
+    - id: stats-1
+      name: Crash Rate
+      number: 89%
+    - id: stats-2
+      name: Error reporting API - Uptime
+      number: 100
+    - id: stats-3
+      name: General API
+      number: 81rps
+    - id: stats-4
+      name: Data Access API
+      number: 93%
+    - id: stats-5
+      name: Average Latency
+      number: 1.98ms
+section-integrations:
+  title: Trusted by
+  logos:
+    - img: images/logos/1.svg
+      name: airbnb
+    - img: images/logos/2.svg
+      name: twitter
+    - img: images/logos/3.svg
+      name: eventbrite
+    - img: images/logos/4.svg
+      name: netflix
+    - img: images/logos/5.svg
+      name: google
+    - img: images/logos/6.svg
+      name: spotify
+section-customers:
+  title: What customers are saying
+  slides:
+    - title: Oasis provides a robust synopsis of our service statuses
+      paragraph: Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+      image: images/customer-1.png
+    - title: Oasis has brought clarity to our architecture
+      paragraph: Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+      image: images/customer-2.png
+section-contact:
+  title: Interested in learning more?
+  description: We'll be launching soon! Sign up for our mailing list to be the first to know when we launch.
+  btn-text: Sign Up
+---
+<!--<nav class="nav&#45;&#45;desktop">-->
+  <!--{% for item in page.nav %}-->
+    <!--<a href="{{site.url}}{{item.link}}" class="js-btn" data-hover="{{ item.name }}">{{ item.name }}</a>-->
+  <!--{% endfor %}-->
+<!--</nav>-->
+<!--<nav class="nav&#45;&#45;mobile">-->
+  <!--<div class="nav&#45;&#45;icon"><i class="fas fa-cube"></i></div>-->
+  <!--<div class="mobile-list">-->
+    <!--<div class="centered">-->
+      <!--{% for item in page.nav %}-->
+        <!--<a href="{{site.url}}{{item.link}}" class="js-btn" data-hover="{{ item.name }}">{{ item.name }}</a>-->
+      <!--{% endfor %}-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</nav>-->
+<section class="section--hero">
+  <div class="flex--horizontal">
+    <div class="flex_child--horizontal aligner">
+      <h1 class="font-fjalla">{{ page.section-hero.title }}</h1>
+      <p class="">{{ page.section-hero.description }}</p>
+      <!--<a href="" class="cta">-->
+        <!--<strong>Learn More</strong><br>-->
+        <!--<small>Sign up for our mailing list</small>-->
+      <!--</a>-->
+    </div>
+    <div class="flex_child--horizontal fadeInUp">
+      <img src="{{ page.section-hero.image }}"  alt="">
+    </div>
+  </div>
+</section>
+<section class="section--summary">
+  <div class="flex--vertical">
+    <div class="flex_child--vertical flex--horizontal summary__lists">
+      {% for list in page.section-summary.list %}
+        <div class="summary__list flex--horizontal fadeIn">
+          <img src="{{ list.img }}" alt="">
+          <p>{{ list.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="flex_child--vertical flex--horizontal aligner fadeIn">
+      <p>{{ page.section-summary.text }}</p>
+      <h2 class="font-fjalla aligner_item--bottom">{{ page.section-summary.title }}</h2>
+    </div>
+  </div>
+</section>
+<!--<section class="section&#45;&#45;snippets scroll-to-reveal js-section">-->
+  <!--<div class="flex&#45;&#45;horizontal">-->
+    <!--<div class="snippets__cards flex&#45;&#45;vertical">-->
+      <!--{% for card in page.section-snippets.cards %}-->
+        <!--<div class="snippets__card flex&#45;&#45;horizontal">-->
+          <!--<p>{{ card.text }}</p>-->
+          <!--<h3 class="font-fjalla">{{ card.stats }}</h3>-->
+        <!--</div>-->
+      <!--{% endfor %}-->
+    <!--</div>-->
+    <!--<div class="snippets__content animated fadeInDown">-->
+      <!--<h3 class="font-fjalla snippets__title">{{ page.section-snippets.title }}</h3>-->
+      <!--<p class="snippets__description">{{ page.section-snippets.description }}</p>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</section>-->
+<section class="section--features scroll-to-reveal js-section">
+
+  <br/><br/><br/><br/>
+
+  <div class="section__title">
+    <h3 class="font-fjalla">{{ page.section-features.title }}</h3>
+    <p>{{ page.section-features.description }}</p>
+  </div>
+  <div class="flex--horizontal">
+    <div class="features__left aligner flex--vertical">
+      {% for feature in page.section-features.features-left %}
+        <div class="flex--vertical fadeInLeft fadeInLeft--{{ forloop.index0 }}">
+          <object type="image/svg+xml" data="{{ feature.img }}"></object>
+          <p>{{ feature.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <img class="features__image" src="{{ page.section-features.image }}" alt="">
+    <div class="features__right aligner flex--vertical">
+      {% for feature in page.section-features.features-right %}
+        <div class="flex--vertical fadeInRight fadeInRight--{{ forloop.index0 }}">
+          <object type="image/svg+xml" data="{{ feature.img }}"></object>
+          <p>{{ feature.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <br/><br/><br/><br/>
+
+</section>
+<!--<section class="section&#45;&#45;stats scroll-to-reveal js-section">-->
+  <!--<div class="section__title">-->
+    <!--<h3 class="font-fjalla">{{ page.section-stats.title }}</h3>-->
+    <!--<p>{{ page.section-stats.description }}</p>-->
+  <!--</div>-->
+  <!--{% for stats in page.section-stats.stats-list %}-->
+    <!--<div class="stats__block">-->
+      <!--<div class="flex&#45;&#45;horizontal">-->
+        <!--<h5 class="stats__name">{{ stats.name }}</h5>-->
+        <!--<h4 class="font-fjalla stats__result">{{ stats.number }}</h4>-->
+      <!--</div>-->
+      <!--<div class="stats">-->
+        <!--<canvas id="{{ stats.id }}" ></canvas>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--{% endfor %}-->
+<!--</section>-->
+<!--<section class="section&#45;&#45;integrations js-section">-->
+  <!--<div class="section__title">-->
+    <!--<h3 class="font-fjalla">{{ page.section-integrations.title }}</h3>-->
+  <!--</div>-->
+  <!--<div class="flex&#45;&#45;horizontal">-->
+    <!--{% for logo in page.section-integrations.logos %}-->
+      <!--<img src="{{ logo.img }}" alt="{{ logo.name }}" class="logo">-->
+    <!--{% endfor %}-->
+  <!--</div>-->
+<!--</section>-->
+<!--<section class="section&#45;&#45;customers js-section">-->
+  <!--<div class="section__container">-->
+    <!--<h4 class="title">{{ page.section-customers.title }}</h4>-->
+    <!--<div class="slide__container">-->
+      <!--{% for slide in page.section-customers.slides %}-->
+        <!--<div>-->
+          <!--<div class="flex&#45;&#45;horizontal slide">-->
+            <!--<div class="slide__content">-->
+              <!--<h4 class="font-fjalla slide-{{forloop.index}}">{{ slide.title }}</h4>-->
+              <!--<p class="slide-{{forloop.index}}">{{ slide.paragraph }}</p>-->
+            <!--</div>-->
+            <!--<img src="{{ slide.image }}" alt="" class="slide__image slide-{{forloop.index}}">-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--{% endfor %}-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</section>-->
+<section class="section--contact js-section">
+  <div class="section__title">
+    <h3 class="font-fjalla">{{ page.section-contact.title }}</h3>
+    <p>{{ page.section-contact.description }}</p>
+    <div class="form-group">
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup">
+        <form action="https://verifera.us18.list-manage.com/subscribe/post?u=b4a783e101653e05e9264f5ec&amp;id=4d8022c0f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll" class="flex--horizontal">
+                <input type="email" value="" name="EMAIL" class="input email" id="mce-EMAIL" placeholder="Your Email" required>
+                <!--real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b4a783e101653e05e9264f5ec_4d8022c0f2" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+        </form>
+    </div>
+    <!--End mc_embed_signup-->
+
+      <!--<input type="text" class="input" placeholder="Your Email">-->
+      <!--<button class="input-button">Sign Up</button>-->
+    </div>
+  </div>
+</section>

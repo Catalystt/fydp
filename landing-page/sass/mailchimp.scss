@@ -1,0 +1,40 @@
+#mc_embed_signup {
+  width: 100%;
+
+  input.email {
+    border: 1px solid #ced4da;
+    flex: 1 1 auto;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-clip: padding-box;
+    border-radius: 3px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 80%;
+    height: auto;
+  }
+
+  .clear {
+  }
+
+  input.button {
+    padding: 0.5rem 1rem;
+    margin-left: -1px;
+    border: none;
+    font-size: 0.8rem;
+    line-height: 29px;
+    border-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #6146d7;
+    color: white;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  input.button:hover {
+    opacity: 0.8;
+  }
+}
