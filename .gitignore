@@ -1,0 +1,5 @@
+.idea
+.DS_store
+document-generator/output
+document-generator/pics
+fastai
